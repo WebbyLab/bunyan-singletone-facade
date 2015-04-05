@@ -28,28 +28,28 @@ Logger.prototype = {
         });
     },
 
-    error: function(data){
-        this.errorLogger.error(data);
+    error: function(){
+        this.errorLogger.error.apply(this.errorLogger, arguments);
     },
 
-    fatal: function(data){
-        this.errorLogger.fatal(data);
+    fatal: function(){
+        this.errorLogger.fatal.apply(this.errorLogger, arguments);
     },
 
-    warn: function(data){
-        this.errorLogger.warn(data);
+    warn: function(){
+        this.errorLogger.warn.apply(this.errorLogger, arguments);
     },
 
-    info: function(data){
-        this.commonLogger.info(data);
+    info: function(){
+        this.commonLogger.info.apply(this.commonLogger, arguments);
     },
 
-    debug: function(data){
-        this.commonLogger.debug(data);
+    debug: function(){
+        this.commonLogger.debug.apply(this.commonLogger, arguments);
     },
 
-    trace: function(data){
-        this.commonLogger.trace(data);
+    trace: function(){
+        this.commonLogger.trace.apply(this.commonLogger, arguments);
     }
 };
 
